@@ -1,0 +1,432 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  outline: 0;
+  font-family: inherit;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Nunito", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+  background-color: #000534;
+  color: #f2f2f2;
+}
+
+:root {
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
+  --container-width-ssm: 91%;
+}
+
+.container {
+  max-width: var(--container-width-lg);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+a {
+  color: whitesmoke;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+nav {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.logo {
+  width: 12rem;
+  height: 4.2rem;
+}
+
+.logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+ul {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.list__item a {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  color: gray;
+}
+
+.humberger__icons {
+  width: 4rem;
+  height: 4rem;
+  color: #ccc;
+  display: none;
+}
+
+/* //mobile nav */
+.mobile__nav__container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #000534;
+  z-index: 999;
+  display: none;
+}
+
+.header {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 5rem;
+}
+.mobile__nav__container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.mobile__list__item a {
+  font-size: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  color: #fff;
+}
+
+.close__icon {
+  width: 4rem;
+  height: 4rem;
+  color: #ccc;
+}
+
+.grid__container {
+  max-width: 100%;
+  height: calc(100vh - 20rem);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.brand__details {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.brand__heading {
+  font-size: 4.4rem;
+  font-weight: 900;
+  line-height: 1.2;
+  letter-spacing: 0.5rem;
+  text-transform: capitalize;
+  color: #f2f2f2;
+}
+
+.brand__subHeading {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.2;
+  text-transform: capitalize;
+  color: #f2f2f2;
+}
+
+.buttons__container {
+  width: 100%;
+  height: max-content;
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.btn {
+  width: 100%;
+  height: 6rem;
+  background-color: #de8226;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: 0.3rem;
+  text-transform: capitalize;
+  color: #000;
+  border-radius: 0.5rem;
+}
+
+.image__container {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.image__container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+section .star {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  animation: animate 8s linear infinite;
+}
+
+section .star.star1 {
+  background-image: url("./img/star1.png");
+}
+
+section .star.star2 {
+  background-image: url("./img/star2.png");
+  animation-delay: 1s;
+}
+
+section .star.star3 {
+  background-image: url(".img/star3");
+  animation-delay: 2s;
+}
+
+section .star.star4 {
+  background-image: url("./img/star4.png");
+  animation-delay: 3s;
+}
+
+section .star.star5 {
+  background-image: url("./img/star5.png");
+  animation-delay: 4s;
+}
+
+section .star.star6 {
+  background-image: url("./img/star6.png");
+  animation-delay: 5s;
+}
+
+@keyframes animate {
+  0%,
+  20%,
+  40%,
+  60%,
+  80%,
+  100% {
+    opacity: 0;
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    opacity: 1;
+    top: 0px;
+  }
+}
+
+.wave__container {
+  width: 100%;
+  height: 15vh;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.waves {
+  position: relative;
+  width: 100%;
+  height: 15vh;
+  margin-bottom: -7px;
+  min-height: 100px;
+  max-height: 100px;
+}
+
+.parallax > use {
+  -webkit-animation: moveForever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+  animation: moveForever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+  -webkit-animation-delay: -2s;
+  animation-delay: -2s;
+  -webkit-animation-duration: 7s;
+  animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+  -webkit-animation-delay: -3s;
+  animation-delay: -3s;
+  -webkit-animation-duration: 10s;
+  animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+  -webkit-animation-delay: -4s;
+  animation-delay: -4s;
+  -webkit-animation-duration: 13s;
+  animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+  -webkit-animation-delay: -5s;
+  animation-delay: -5s;
+  -webkit-animation-duration: 20s;
+  animation-duration: 20s;
+}
+
+@-webkit-keyframes moveForever {
+  0% {
+    -webkit-transform: translate3d(-90px, 0, 0);
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(85px, 0, 0);
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+@keyframes moveForever {
+  0% {
+    -webkit-transform: translate3d(-90px, 0, 0);
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    -webkit-transform: translate3d(85px, 0, 0);
+    transform: translate3d(85px, 0, 0);
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media screen and (max-width: 992px) {
+  html {
+    font-size: 50%;
+  }
+  .grid__container {
+    grid-template-columns: 1fr;
+  }
+  .brand__heading {
+    font-size: 3.4rem;
+    text-align: center;
+  }
+  .brand__subHeading {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  .btn {
+    font-size: 1.2rem;
+  }
+  .waves {
+    height: 20rem;
+    min-height: 40px;
+  }
+  .image__container {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+  .grid__container {
+    grid-template-columns: 1fr;
+  }
+  .brand__heading {
+    font-size: 3.4rem;
+    text-align: center;
+  }
+  .brand__subHeading {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  .btn {
+    font-size: 1.2rem;
+  }
+  .waves {
+    height: 20rem;
+    min-height: 40px;
+  }
+
+  .waves {
+    height: 30rem;
+    min-height: 40px;
+  }
+  .image__container {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+  }
+  .list__item {
+    display: none;
+  }
+  .humberger__icons {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  html {
+    font-size: 45%;
+  }
+  .grid__container {
+    grid-template-columns: 1fr;
+  }
+  .brand__heading {
+    font-size: 3.4rem;
+    text-align: center;
+  }
+  .brand__subHeading {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+  .btn {
+    font-size: 1.2rem;
+  }
+  .waves {
+    height: 20rem;
+    min-height: 40px;
+  }
+}
